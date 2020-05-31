@@ -1,0 +1,44 @@
+.layout {
+  height: 100vh;
+  font-family: Roboto, serif;
+  overflow-y: scroll;
+
+  &__nav {
+    background: white;
+    position: fixed;
+    width: 240px;
+    top: 0;
+    left: 0;
+    height: 100vh;
+  }
+
+  &__main {
+    margin: 0 0 0 240px;
+    padding: 0 50px;
+    display: flex;
+    flex-direction: column;
+    background: #FAFBFF;
+    min-height: 100vh;
+  }
+
+  &__header {
+    display: flex;
+  }
+
+  &__title {
+    line-height: 30px;
+    padding: 18px 0;
+    font-size: 20px;
+    color: #2A2F44;
+    font-weight: 500;
+  }
+
+  &__strong {
+    color: #2842BA;
+  }
+
+  &__content {
+    display: flex;
+    flex-wrap: wrap;
+  }
+}

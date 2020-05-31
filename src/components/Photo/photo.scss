@@ -1,0 +1,15 @@
+.photo {
+  padding: 8px;
+  border-radius: 4px;
+
+  &_active {
+
+  }
+
+  &__img {
+    width: 150px;
+    height: 150px;
+    background: #eaeaeb;
+    border-radius: 4px;
+  }
+}
