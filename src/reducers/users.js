@@ -1,9 +1,13 @@
-export default function (state = [], action) {
+export default function (state = {}, action) {
   switch (action.type) {
+    case 'START_USERS_LOADING':
+      return {
+        loading: true
+      };
     case 'SHOW_USERS':
-      return action.payload;
+      return {users: action.payload, loading: false};
     case 'SELECT_USER':
-      return state.map((user) => {
+      return state.users.map((user) => {
         user.selected = false;
 
         if (user.id === action.id) {

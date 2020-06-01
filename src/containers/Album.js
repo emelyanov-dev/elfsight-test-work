@@ -3,6 +3,7 @@ import {connect} from "react-redux";
 import {Link} from 'react-router-dom';
 
 import Photo from '../components/Photo';
+import Icon from '../components/Icon';
 
 import {fetchAlbumDetails} from "../actions";
 import Gallery from './Gallery';
@@ -29,7 +30,10 @@ class Album extends Component {
 
     return (
       <LayoutMain
-        header={<h1 className='layout__title'><Link to={`/users/${this.props.album.userId}`}>Back</Link> Альбом "<span className="layout__strong">{this.props.album.title}</span>"</h1>}
+        header={<h1 className='layout__title'>
+          <Link to={`/users/${this.props.album.userId}`} className="layout__back"><Icon name='keyboard_backspace'/></Link>
+          Альбом "<span className="layout__strong">{this.props.album.title}</span>"
+        </h1>}
       >
         <div className='grid'>
           {photos && photos.map(mapPhotos)}

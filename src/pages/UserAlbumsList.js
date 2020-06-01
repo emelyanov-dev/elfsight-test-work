@@ -4,18 +4,16 @@ import UsersContainer from '../containers/UsersContainer';
 import AlbumsListContainer from '../containers/AlbumsList';
 
 export default function UserAlbumsList(props) {
-    console.log(props.match.params.userId);
-
-    return (
-        <Layout>
-            <LayoutNav>
-                <UsersContainer userId={props.match.params.userId}/>
-            </LayoutNav>
-            <LayoutMain
-                header={<h1 className='layout__title'>Альбомы пользователя</h1>}
-            >
-                <AlbumsListContainer userId={props.match.params.userId}/>
-            </LayoutMain>
-        </Layout>
-    )
+  return (
+    <Layout>
+      <LayoutNav>
+        <UsersContainer userId={props.match.params.userId}/>
+      </LayoutNav>
+      <LayoutMain
+        header={<h1 className='layout__title'>Альбомы пользователя</h1>}
+      >
+        <AlbumsListContainer userId={props.match.params.userId}/>
+      </LayoutMain>
+    </Layout>
+  )
 }

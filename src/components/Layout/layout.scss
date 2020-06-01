@@ -33,6 +33,18 @@
     font-weight: 500;
   }
 
+  &__back {
+    font-size: 20px;
+    color: #2A2F44;
+    text-decoration:none;
+    vertical-align: sub;
+    padding: 0 20px 0 0;
+
+    :hover {
+      color: #2842BA;
+    }
+  }
+
   &__strong {
     color: #2842BA;
   }

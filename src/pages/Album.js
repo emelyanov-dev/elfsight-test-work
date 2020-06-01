@@ -4,8 +4,6 @@ import UsersContainer from "../containers/UsersContainer";
 import AlbumContainer from "../containers/Album";
 
 export default function Album(props) {
-    console.log(props);
-
     return (
         <Layout>
             <LayoutNav>

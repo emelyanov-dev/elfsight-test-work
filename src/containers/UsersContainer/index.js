@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import {connect} from 'react-redux';
 import User from "../../components/User";
+import Spinner from "../../components/Spinner";
 import './usersContainer.scss';
 import {selectUser, fetchUsers} from "../../actions";
 
@@ -10,11 +11,14 @@ class UsersContainer extends Component {
     }
 
     render() {
+        const {users, loading} = this.props.users;
+
         return (
             <div className="usersContainer">
+                {loading && <Spinner size={4}/>}
                 {
-                    this.props.users &&
-                    this.props.users.map(user =>
+                    users &&
+                    users.map(user =>
                         <User
                             onClick={() => this.props.selectUser(user.id)}
                             key={user.id}
