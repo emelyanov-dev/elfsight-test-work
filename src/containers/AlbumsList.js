@@ -18,8 +18,8 @@ class AlbumsList extends Component {
 
   render() {
     const {albums} = this.props;
-      console.log(albums);
-      return (
+    console.log(albums);
+    return (
       <div className='grid'>
         {albums.loading && <Spinner size={5}/>}
         {albums.error && 'Не удалось загрузить'}

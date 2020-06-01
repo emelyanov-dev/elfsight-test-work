@@ -1,15 +1,17 @@
 import {Layout, LayoutMain, LayoutNav} from "../components/Layout";
-import React from "react";
 import UsersContainer from "../containers/UsersContainer";
 import AlbumContainer from "../containers/Album";
+import React from "react";
 
-export default function Album(props) {
+export default function (props) {
   return (
     <Layout>
       <LayoutNav>
         <UsersContainer/>
       </LayoutNav>
-      <AlbumContainer albumId={props.match.params.albumId}/>
+      <LayoutMain>
+        Выберите пользователя
+      </LayoutMain>
     </Layout>
   )
 }

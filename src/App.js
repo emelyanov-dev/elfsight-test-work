@@ -5,15 +5,15 @@ import routes from "./routes";
 import store from './store';
 
 function App() {
-    return (
-        <Provider store={store}>
-            <BrowserRouter>
-                <Switch>
-                    {routes.map((route, index) => <Route key={index} {...route}/>)}
-                </Switch>
-            </BrowserRouter>
-        </Provider>
-    );
+  return (
+    <Provider store={store}>
+      <BrowserRouter>
+        <Switch>
+          {routes.map((route, index) => <Route key={index} {...route}/>)}
+        </Switch>
+      </BrowserRouter>
+    </Provider>
+  );
 }
 
 export default App;

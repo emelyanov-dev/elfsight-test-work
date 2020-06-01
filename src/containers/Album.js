@@ -31,7 +31,8 @@ class Album extends Component {
     return (
       <LayoutMain
         header={<h1 className='layout__title'>
-          <Link to={`/users/${this.props.album.userId}`} className="layout__back"><Icon name='keyboard_backspace'/></Link>
+          <Link to={`/users/${this.props.album.userId}`} className="layout__back"><Icon
+            name='keyboard_backspace'/></Link>
           Альбом "<span className="layout__strong">{this.props.album.title}</span>"
         </h1>}
       >
